@@ -205,7 +205,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <div class="d-flex align-items-center">
-                    <a class="navbar-brand" href="Tesis.php">
+                    <a class="navbar-brand" href="index.php">
                         <img src="https://cdn.icon-icons.com/icons2/656/PNG/512/settings_online_web_pc_mac_monitor_icon-icons.com_59975.png" alt="" height="100px" class="header-logo">
                     </a>
                     <h1 class="header-title mb-0">PCRepair</h1>
