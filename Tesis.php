@@ -2,77 +2,166 @@
 <?php
 session_start();
 
-if(isset($_POST['AceptarLogin'])) {
-    LogTrue();
+if (isset($_POST['AceptarLogin'])) {
+  LogTrue();
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <link rel="shorcut icon" href="https://cdn.icon-icons.com/icons2/656/PNG/512/settings_online_web_pc_mac_monitor_icon-icons.com_59975.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tesis</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  
+
   <!-- Estilos de iconos en header y body -->
   <style>
-    .Cuerpo{
+    .Cuerpo {
       background-color: #f8f9fa;
     }
-    .navbar-nav{
+
+    .navbar-nav {
       display: flex;
       justify-content: center;
       align-items: center;
       margin-inline-start: 10%;
     }
 
-    #EnlaceAdmin{
+    #EnlaceAdmin {
       width: 35px;
       height: 35px;
       display: flex;
       margin-bottom: 10px;
       margin-right: 2px;
-      position: absolute; right: 0;
+      position: absolute;
+      right: 0;
     }
-    #IconoAdmin:hover{
+
+    #IconoAdmin:hover {
       border-radius: 0px;
       transform: scale(1.2);
       vertical-align: middle;
       transition: transform 0.3s ease;
       filter: drop-shadow(2px 2px 2px #000);
     }
+
     @media screen and (max-width: 1024px) {
-    #EnlaceAdmin {
-        right: 10px; /* Para pantallas pequeñas */
+      #EnlaceAdmin {
+        right: 10px;
+        /* Para pantallas pequeñas */
         bottom: 150px;
+      }
     }
-  }
-  /*Menú de hamburguesa*/
-  .navbar-toggler:focus{
+
+    /*Menú de hamburguesa*/
+    .navbar-toggler:focus {
       box-shadow: none;
-  }
+    }
 
-  .card{
-    font-size: large;
-  }
+    .card {
+      font-size: large;
+    }
 
-  .card:hover{
-    border-radius: 5px;
-    filter: drop-shadow(2px 2px 2px #000);
-    /*Sombra eje x eje y bordes*/
-  }
+    .card:hover {
+      border-radius: 5px;
+      filter: drop-shadow(2px 2px 2px #000);
+      /*Sombra eje x eje y bordes*/
+    }
 
- 
-  /*Botones del Login*/
-  #btnAceptarLogin:hover,#btnCancelarLogin:hover{
-    transform: none;
-    border-radius: 5px;
-    filter: drop-shadow(2px 2px 2px #000);
+    /* Para el texto de las tarjetas */
+    .card-text {
+      text-align: left;
+      line-height: 1.6;
+    }
+
+    /* Estilos para las cards con imágenes */
+.card-img-responsive {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .card-img-responsive {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
   }
   
+  .card-body .row {
+    margin: 0;
+  }
+  
+  .card-text {
+    text-align: left !important;
+  }
+}
+
+    /* Media query para pantallas pequeñas */
+    @media (max-width: 768px) {
+      .card-text {
+        text-align: left !important;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .card-title {
+        font-size: 18px;
+      }
+
+      .card-body {
+        padding: 15px;
+      }
+
+      /* Footer responsive en tablets */
+      #footer {
+        padding: 15px 10px;
+        gap: 15px !important;
+      }
+
+      #footer a {
+        margin: 8px 15px;
+        font-size: 15px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .card-text {
+        font-size: 18px;
+      }
+
+      /* Footer responsive en móviles */
+      #footer {
+        flex-direction: column !important;
+        gap: 15px !important;
+        padding: 20px 10px;
+      }
+      
+      #footer a {
+        margin: 10px 0;
+        justify-content: center;
+        font-size: 18px;
+      }
+
+      #footer img {
+        width: 22px !important;
+        height: 22px !important;
+      }
+    }
+
+    /*Botones del Login*/
+    #btnAceptarLogin:hover,
+    #btnCancelarLogin:hover {
+      transform: none;
+      border-radius: 5px;
+      filter: drop-shadow(2px 2px 2px #000);
+    }
   </style>
+  
   <!--Estilo del carousel-->
   <style>
     .carousel-fade .carousel-item {
@@ -80,69 +169,91 @@ if(isset($_POST['AceptarLogin'])) {
       transition-duration: .6s;
       transition-property: opacity;
     }
+
     .carousel-fade .carousel-item.active {
       opacity: 1;
     }
+
     /* Estilos de botones */
-    .btn{
+    .btn {
       font-size: large;
     }
-    .btn:hover{
+
+    .btn:hover {
       transform: scale(1.2);
       transition: transform 0.3s ease;
       border-radius: 5px;
       filter: drop-shadow(2px 2px 2px #000);
     }
   </style>
+  
   <!-- Estilos dentro de footer -->
   <style>
-    .footer a{
-      text-decoration: none;
-      color: #000;
+    /* Estilos base del footer */
+    .footer {
+      padding: 15px 10px;
     }
 
-    .footer a:hover{
-      text-shadow: 0px 0px 0px;
-      color:#000;
-      text-decoration: underline;
-     }
+    .footer a {
+      text-decoration: none;
+      color: #000;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+    }
 
-     #Facebook:hover{
+    .footer a:hover {
+      text-shadow: 0px 0px 0px;
+      color: #000;
+      text-decoration: underline;
+    }
+
+    .footer img {
+      flex-shrink: 0;
+    }
+
+    #Facebook:hover {
       border-radius: 0px;
       transform: scale(1.2);
       transition: transform 0.3s ease;
       filter: drop-shadow(2px 2px 2px #000);
-     }
-     #Whatsapp:hover{
+    }
+
+    #Whatsapp:hover {
       transform: scale(1.2);
       transition: transform 0.3s ease;
       border-radius: 5px;
       filter: drop-shadow(2px 2px 2px #000);
-     }
-     #Regresar:hover{
+    }
+
+    #Regresar:hover {
       transform: scale(1.2);
       transition: transform 0.3s ease;
       border-radius: 0px;
       filter: drop-shadow(2px 2px 2px #000);
-     }
-     /*Botones de terminos y condiciones*/
-     #btnNoAcepto:hover,#btnAcepto:hover{
+    }
+
+    /*Botones de terminos y condiciones*/
+    #btnNoAcepto:hover,
+    #btnAcepto:hover {
       transform: none;
       border-radius: 5px;
       filter: drop-shadow(2px 2px 2px #000);
-     }
-     /*Botones de politicas de privacidad*/
-     #btnNoAceptar:hover,#btnAceptar:hover{
+    }
+
+    /*Botones de politicas de privacidad*/
+    #btnNoAceptar:hover,
+    #btnAceptar:hover {
       transform: none;
       border-radius: 5px;
       filter: drop-shadow(2px 2px 2px #000);
-     }
+    }
   </style>
 
 </head>
 
 <body class="Cuerpo">
-<!-- Contenedor total -->
+  <!-- Contenedor total -->
   <div class="container py-2">
     <!--Header de Navegación-->
     <div class="card bg-light mb-4" id="inicial">
@@ -179,7 +290,7 @@ if(isset($_POST['AceptarLogin'])) {
         </div>
       </nav>
     </div>
-    
+
     <!--Modal Login -->
     <form action="" method="POST">
       <div class="modal fade" id="modalLogin" data-bs-backdrop="static">
@@ -205,9 +316,10 @@ if(isset($_POST['AceptarLogin'])) {
       </div>
     </form>
 
-<!--Fin de sesion dentro de función-->
+    <!--Fin de sesion dentro de función-->
     <?php
-function LogTrue() {
+    function LogTrue()
+    {
       // Conexión a la Base de Datos   
       $conex = new mysqli('localhost', 'root', '', 'tesis');
       if ($conex->connect_errno) {
@@ -225,8 +337,8 @@ function LogTrue() {
         $_SESSION['usuario'] = $usuario;
         header("Location: tesisAdmin.php");
         exit;
-    } else {
-      echo "<div id='successAlert' class='alert alert-success mt-3 text-center'>
+      } else {
+        echo "<div id='successAlert' class='alert alert-success mt-3 text-center'>
       Por favor, ingrese un usuario y contraseña correctos.</div>";
       }
       $conex->close();
@@ -378,34 +490,43 @@ function LogTrue() {
         </div>
       </div>
     </div>
-    <!--DIVISOR-->            
+    <!--DIVISOR-->
     <hr>
     <!-- Reparaciones -->
-    <div class="card bg-light">
-      <div class="card-header">
-        <h1 class="h3 card-title text-center" id="ContenidoRep">Reparaciones</h1>
+<div class="card bg-light">
+  <div class="card-header">
+    <h1 class="h3 card-title text-center" id="ContenidoRep">Reparaciones</h1>
+  </div>
+  <div class="card-body">
+    <div class="row align-items-center">
+      <div class="col-md-6 col-12 mb-3 mb-md-0">
+        <img src="img\taller.jpg" class="card-img-responsive img-fluid rounded">
       </div>
-      <div class="card-body d-flex w-100">
-      <div class="d-block w-50 justify-content-left"><img src="img\taller.jpg" class="card-img-top d-block"></div>
-        <div class="d-block w-50 justify-content-right"><p class="card-text ms-3 me-4 mt-2 mb-2" style="text-align: justify;">
+      <div class="col-md-6 col-12">
+        <p class="card-text px-3">
           Realizamos todo tipo de reparaciones incluyendo Hardware y Software. Analizamos el problema de su Hard
           en nuestro taller de trabajo con el equipamiento adecuado para controlar la salud de todos sus dispositivos
           electrónicos que limitan el rendimiento de su PC. También le ofrecemos el Software adecuado para que usted
           pueda exprimir al máximo su ordenador, y utilizarlo para el área para la cual está orientado su uso. Puede
           solicitar los programas que usted necesite para sus estudios, trabajo o simplemente disfrutar del ocio.
         </p>
-        </div>
       </div>
     </div>
-    <!--DIVISOR-->    
-    <hr>
-    <!-- Sobre Nosotros -->
-    <div class="card bg-light">
-      <div class="card-header">
-        <h1 class="h3 card-title text-center" id="ContenidoSobre">Sobre nosotros</h1>
-      </div>
-      <div class="card-body d-flex w-100">
-        <div class="d-block w-50 justify-content-left"><p class="card-text ms-3 me-4 mt-2 mb-2" style="text-align: justify;">
+  </div>
+</div>
+
+<!--DIVISOR-->
+<hr>
+
+<!-- Sobre Nosotros -->
+<div class="card bg-light">
+  <div class="card-header">
+    <h1 class="h3 card-title text-center" id="ContenidoSobre">Sobre nosotros</h1>
+  </div>
+  <div class="card-body">
+    <div class="row align-items-center">
+      <div class="col-md-6 col-12 order-md-1 order-2">
+        <p class="card-text px-3">
           Somos una empresa familiar dedicada a brindarle el mejor asesoramiento en Sistemas que usted necesite.
           Tenemos más de 10 años de experiencia en el rubro de la reparación y recientemente incorporamos la venta
           completa del Hardware que sea necesario para cubrir las necesidades de nuestros clientes, contamos con equipo
@@ -413,21 +534,24 @@ function LogTrue() {
           económica del país por lo tanto podemos ofrecerles diversas formas de pago con la mejor financiación.
         </p>
       </div>
-      <div class="d-block w-50 justify-content-right"><img src="img\Sobre.jpg" class="card-img-top d-block"></div>
+      <div class="col-md-6 col-12 order-md-2 order-1 mb-3 mb-md-0">
+        <img src="img\Sobre.jpg" class="card-img-responsive img-fluid rounded">
+      </div>
     </div>
-    </div>
-    <!--DIVISOR-->           
+  </div>
+</div>
+    <!--DIVISOR-->
     <hr>
     <!-- Footer Enlaces -->
     <div class="card bg-light">
-      <div class="footer d-flex justify-content-center bg-light mt-2" id="footer">
-        <a href="#inicial" class="ms-0 me-4"><img src="img/Regresar.png" style="width: 25px;height: 25px;" id="Regresar" onclick="scrollToSection(inicial)"></a>
-        <a href="" class="me-2 " data-bs-toggle="modal" data-bs-target="#poli">Políticas de privacidad</a>
-        <a href="" class="me-2 " data-bs-toggle="modal" data-bs-target="#termi">Términos y Condiciones</a>
-        <p class="ms-4">Contáctenos</p>
-        <a href="https://wa.me/3564638423" target="_blank" class="ms-2 me-2"><img src="img/Whatsapp.png" style="width: 25px;height: 25px;" id="Whatsapp" alt=""></a>
-        <p>Siganos en nuestra red social</p>
-        <a href="https://www.facebook.com/people/Pcs-Repair/61559353245060/" target="_blank" class="ms-2"><img src="img/Facebook.png" style="width: 30px;height: 30px;" id="Facebook" alt=""></a>
+      <div class="footer d-flex flex-wrap justify-content-center align-items-center bg-light mt-2 gap-3 py-3" id="footer">
+        <a href="#inicial" class="ms-0 me-4 d-flex align-items-center"><img src="img/Regresar.png" style="width: 25px;height: 25px;" id="Regresar" onclick="scrollToSection(inicial)"></a>
+        <a href="" class="ms-0 me-4 d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#poli">Políticas de privacidad</a>
+        <a href="" class="ms-0 me-4 d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#termi">Términos y Condiciones</a>
+        <p class="mt-3">Contáctenos</p>
+        <a href="https://wa.me/3564638423" target="_blank" class="ms-0 me-4 d-flex align-items-center"><img src="img/Whatsapp.png" style="width: 25px;height: 25px;" id="Whatsapp" alt=""></a>
+        <p class="mt-3">Siganos en nuestra red social</p>
+        <a href="https://www.facebook.com/people/Pcs-Repair/61559353245060/" target="_blank" class="ms-0 me-4 d-flex align-items-center"><img src="img/Facebook.png" style="width: 30px;height: 30px;" id="Facebook" alt=""></a>
       </div>
     </div>
     <!-- Modal de politicas de privacidad -->
@@ -438,7 +562,7 @@ function LogTrue() {
             <h5 class="modal-title col-11 text-center">Políticas de privacidad</h5>
             <button class="btn-close" data-bs-dismiss="modal"></button>
           </div>
-          <div class="modal-body" id="contenidoModal" style="max-height: 300px; overflow-y: auto;"> 
+          <div class="modal-body" id="contenidoModal" style="max-height: 300px; overflow-y: auto;">
             <p><strong>Introducción</strong></p>
             <p>En PCRepair, valoramos tu privacidad. Esta política de privacidad describe cómo recopilamos, utilizamos, compartimos y protegemos tu información personal cuando visitas nuestro sitio web
               o utilizas nuestros servicios.</p>
@@ -492,14 +616,13 @@ function LogTrue() {
 
 
       //Funcion para desaparecer alertas
-             // Oculta el mensaje de éxito después de 1 segundo
-             setTimeout(function() {
-                var successAlert = document.getElementById('successAlert');
-                if (successAlert) {
-                successAlert.style.display = 'none';
-                }
-            }, 2000);
-
+      // Oculta el mensaje de éxito después de 1 segundo
+      setTimeout(function() {
+        var successAlert = document.getElementById('successAlert');
+        if (successAlert) {
+          successAlert.style.display = 'none';
+        }
+      }, 2000);
     </script>
 
 
