@@ -27,7 +27,7 @@
         </div>
       </nav>
     </div>
-    </div>
+    
     <hr>
 
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
@@ -96,7 +96,7 @@
     <!--DIVISOR-->
     <hr>
     <div class="mt-auto d-flex justify-content-center">
-      <form method="POST" action="tesis.php">
+      <form method="POST" action="index.php">
         <input type="submit" class="btn btn-primary mt-0" value="Regresar" name="btnIngreso">
       </form>
     </div>
@@ -275,11 +275,11 @@
       }
     </script>
 
-    </div>
+   
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
   </div>
-  </body>
+</body>
 
 </html>
