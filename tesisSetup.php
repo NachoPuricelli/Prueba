@@ -8,24 +8,24 @@
     <title>Setup</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="Estilos.css">
-    
+
 </head>
 
 <body>
     <div class="container py-2">
-    <div class="card bg-light" id="header-border2">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <div class="d-flex align-items-center">
-                    <a class="navbar-brand" href="Tesis.php">
-                        <img src="https://cdn.icon-icons.com/icons2/656/PNG/512/settings_online_web_pc_mac_monitor_icon-icons.com_59975.png" alt="" height="100px" class="header-logo">
-                    </a>
-                    <h1 class="header-title mb-0">PCRepair</h1>
+        <div class="card bg-light" id="header-border2">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <div class="d-flex align-items-center">
+                        <a class="navbar-brand" href="Tesis.php">
+                            <img src="https://cdn.icon-icons.com/icons2/656/PNG/512/settings_online_web_pc_mac_monitor_icon-icons.com_59975.png" alt="" height="100px" class="header-logo">
+                        </a>
+                        <h1 class="header-title mb-0">PCRepair</h1>
+                    </div>
+                    <h2 class="header-subtitle text-primary mb-0">Solicitudes de Software</h2>
                 </div>
-                <h2 class="header-subtitle text-primary mb-0">Solicitudes de Software</h2>
-            </div>
-        </nav>
-    </div>
+            </nav>
+        </div>
 
         <form action="" method="POST" id="consultaForm" onsubmit="return validateForm(event)">
             <div>
@@ -72,7 +72,7 @@
 
             if (!empty($nombreS) && !empty($emailS) && !empty($soDeseado) && !empty($softSolicitados)) {
                 // Conexión a la Base de Datos
-                 $conex = new mysqli('sql312.infinityfree.com', 'if0_40195577', 'Z8yKTU0s9LP6', 'if0_40195577_tesis');
+                $conex = new mysqli('sql312.infinityfree.com', 'if0_40195577', 'Z8yKTU0s9LP6', 'if0_40195577_tesis');
                 if ($conex->connect_errno) {
                     die("Error en la conexión: " . $conex->connect_error);
                 }
@@ -175,7 +175,7 @@
         </script>
 
         <!-- Footer Enlaces -->
-        <div class="Contenedorfooter">
+       <div class="Contenedorfooter">
             <!--DIVISOR-->
             <hr>
             <div class="card bg-light">
@@ -190,7 +190,7 @@
                 </div>
             </div>
         </div>
-    
+
 
         <!-- Modal de politicas de privacidad -->
         <div class="modal fade" id="poli" data-bs-backdrop="static">
@@ -355,7 +355,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-            
+
 </body>
 
 </html>
