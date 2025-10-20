@@ -259,7 +259,7 @@
 
             if (!empty($nombreS) && !empty($emailS) && !empty($soDeseado) && !empty($softSolicitados)) {
                 // Conexión a la Base de Datos
-                $conex = new mysqli('localhost', 'root', '', 'tesis');
+                 $conex = new mysqli('sql312.infinityfree.com', 'if0_40195577', 'Z8yKTU0s9LP6', 'if0_40195577_tesis');
                 if ($conex->connect_errno) {
                     die("Error en la conexión: " . $conex->connect_error);
                 }

@@ -287,7 +287,7 @@ $usuario = $_SESSION['usuario'];
 
                     if (valorSeleccionado == 'opcion1') {
                         contenidoDiv.innerHTML = `<?php
-                                                    $conex = new mysqli('localhost', 'root', '', 'tesis');
+                                                     $conex = new mysqli('sql312.infinityfree.com', 'if0_40195577', 'Z8yKTU0s9LP6', 'if0_40195577_tesis');
                                                     $consulta = "select * from setup";
                                                     $resultado = mysqli_query($conex, $consulta);
 
@@ -350,7 +350,7 @@ $usuario = $_SESSION['usuario'];
 
                     } else if (valorSeleccionado == 'opcion2') {
                         contenidoDiv.innerHTML = `<?php
-                                                    $conex = new mysqli('localhost', 'root', '', 'tesis');
+                                                     $conex = new mysqli('sql312.infinityfree.com', 'if0_40195577', 'Z8yKTU0s9LP6', 'if0_40195577_tesis');
                                                     $consulta = "select * from health";
                                                     $resultado = mysqli_query($conex, $consulta);
 
