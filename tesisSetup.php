@@ -120,20 +120,20 @@
 </head>
 
 <body>
-    <div class="container py-2">
-        <div class="card bg-light" id=header-border2>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container d-flex justify-content-start">
+    <<div class="container py-2">
+    <div class="card bg-light" id="header-border2">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <div class="d-flex align-items-center">
                     <a class="navbar-brand" href="Tesis.php">
-                        <img src="https://cdn.icon-icons.com/icons2/656/PNG/512/settings_online_web_pc_mac_monitor_icon-icons.com_59975.png" alt="" height="100px">
+                        <img src="https://cdn.icon-icons.com/icons2/656/PNG/512/settings_online_web_pc_mac_monitor_icon-icons.com_59975.png" alt="" height="100px" class="header-logo">
                     </a>
-                    <h1>PCRepair</h1>
-                    <div class="position-absolute top-50 start-50 translate-middle">
-                        <h2 class="mt-2 text-primary">Solicitudes de Software</h2>
-                    </div>
+                    <h1 class="header-title mb-0">PCRepair</h1>
                 </div>
-            </nav>
-        </div>
+                <h2 class="header-subtitle text-primary mb-0">Solicitudes de Software</h2>
+            </div>
+        </nav>
+    </div>
 
         <form action="" method="POST" id="consultaForm" onsubmit="return validateForm(event)">
             <div>
