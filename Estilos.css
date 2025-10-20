@@ -1,0 +1,380 @@
+/* ============================================
+   ESTILOS GLOBALES - PCRepair
+   ============================================ */
+
+/* Body y contenedor principal */
+.Cuerpo {
+  background-color: #f8f9fa;
+}
+
+/* ============================================
+   NAVBAR Y HEADER
+   ============================================ */
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline-start: 10%;
+}
+
+#EnlaceAdmin {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  margin-bottom: 10px;
+  margin-right: 2px;
+  position: absolute;
+  right: 0;
+}
+
+#IconoAdmin:hover {
+  border-radius: 0px;
+  transform: scale(1.2);
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(2px 2px 2px #000);
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Estilos para el header/navbar */
+#header-border2 .navbar {
+  padding: 15px 0;
+}
+
+#header-border2 .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  height: 100px;
+  transition: transform 0.3s ease;
+}
+
+.header-logo:hover {
+  transform: scale(1.05);
+}
+
+.header-title {
+  font-size: 2rem;
+  margin-left: 15px;
+  white-space: nowrap;
+}
+
+.header-subtitle {
+  font-size: 1.5rem;
+}
+
+/* ============================================
+   CARDS
+   ============================================ */
+.card {
+  font-size: large;
+}
+
+.card:hover {
+  border-radius: 5px;
+  filter: drop-shadow(2px 2px 2px #000);
+}
+
+.card-header {
+  padding: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.card-header h1,
+.card-header .h3 {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.card-text {
+  text-align: left;
+  line-height: 1.6;
+}
+
+.card-img-responsive {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ============================================
+   BOTONES
+   ============================================ */
+.btn {
+  font-size: large;
+}
+
+.btn:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+  border-radius: 5px;
+  filter: drop-shadow(2px 2px 2px #000);
+}
+
+/* Botones específicos que NO deben escalar */
+#btnAceptarLogin:hover,
+#btnCancelarLogin:hover,
+#btnNoAcepto:hover,
+#btnAcepto:hover,
+#btnNoAceptar:hover,
+#btnAceptar:hover {
+  transform: none;
+  border-radius: 5px;
+  filter: drop-shadow(2px 2px 2px #000);
+}
+
+/* ============================================
+   FORMULARIOS
+   ============================================ */
+.form-label {
+  margin-bottom: 0px;
+  margin-top: 4px;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.Contenedorfooter {
+  width: 100%;
+  margin-bottom: 8px;
+  align-items: center;
+}
+
+.footer {
+  padding: 15px 10px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #000;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.footer a:hover {
+  text-shadow: 0px 0px 0px;
+  color: #000;
+  text-decoration: underline;
+}
+
+.footer img {
+  flex-shrink: 0;
+}
+
+#Facebook:hover {
+  border-radius: 0px;
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+  filter: drop-shadow(2px 2px 2px #000);
+}
+
+#Whatsapp:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+  border-radius: 5px;
+  filter: drop-shadow(2px 2px 2px #000);
+}
+
+#Regresar:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+  border-radius: 0px;
+  filter: drop-shadow(2px 2px 2px #000);
+}
+
+/* ============================================
+   CAROUSEL (solo para index.php)
+   ============================================ */
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition-duration: .6s;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-item.active {
+  opacity: 1;
+}
+
+/* ============================================
+   TABLA (solo para tesisAdmin.php)
+   ============================================ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  border-radius: 15px;
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* ============================================
+   MEDIA QUERIES - RESPONSIVE
+   ============================================ */
+
+/* Tablets y pantallas medianas (≤992px) */
+@media (max-width: 992px) {
+  #header-border2 .container {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .header-subtitle {
+    width: 100%;
+    margin-top: 15px;
+    font-size: 1.3rem;
+  }
+}
+
+/* Pantallas pequeñas (≤768px) */
+@media (max-width: 768px) {
+  .header-logo {
+    height: 70px;
+  }
+  
+  .header-title {
+    font-size: 1.5rem;
+    margin-left: 10px;
+  }
+  
+  .header-subtitle {
+    font-size: 1.1rem;
+    margin-top: 10px;
+  }
+
+  .card-header {
+    padding: 12px 10px;
+  }
+
+  .card-header h1,
+  .card-header .h3 {
+    font-size: 1.3rem;
+    padding: 8px 0;
+  }
+
+  .card-text {
+    text-align: left !important;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  .card-img-responsive {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .card-body .row {
+    margin: 0;
+  }
+
+  /* Footer responsive en tablets */
+  #footer {
+    padding: 15px 10px;
+    gap: 15px !important;
+  }
+
+  #footer a {
+    margin: 8px 15px;
+    font-size: 15px;
+  }
+}
+
+/* Móviles pequeños (≤576px) */
+@media (max-width: 576px) {
+  .header-logo {
+    height: 60px;
+  }
+  
+  .header-title {
+    font-size: 1.3rem;
+  }
+  
+  .header-subtitle {
+    font-size: 1rem;
+    margin-top: 8px;
+  }
+  
+  #header-border2 .navbar {
+    padding: 10px 0;
+  }
+
+  .card-header h1,
+  .card-header .h3 {
+    font-size: 1.1rem;
+    padding: 5px 0;
+  }
+
+  .card-text {
+    font-size: 13px;
+  }
+
+  /* Footer responsive en móviles */
+  #footer {
+    flex-direction: column !important;
+    gap: 15px !important;
+    padding: 20px 10px;
+  }
+  
+  #footer a {
+    margin: 10px 0;
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  #footer img {
+    width: 22px !important;
+    height: 22px !important;
+  }
+}
+
+/* Admin icon en pantallas pequeñas */
+@media screen and (max-width: 1024px) {
+  #EnlaceAdmin {
+    right: 10px;
+    bottom: 150px;
+  }
+}
+
+/* Asegura que el navbar no tape contenido */
+.navbar {
+  z-index: 1030;
+}
+
+body.Cuerpo {
+  padding-top: 0;
+}

@@ -8,75 +8,7 @@
   <title>Building</title>
   <link rel="stylesheet" href="Tesis.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-  <style>
-    /* Estilos de botones */
-    .btn {
-      font-size: large;
-    }
-
-    .btn:hover {
-      transform: scale(1.2);
-      transition: transform 0.3s ease;
-      border-radius: 5px;
-      filter: drop-shadow(2px 2px 2px #000);
-    }
-
-    .form-label {
-      margin-bottom: 0px;
-      margin-top: 4px;
-    }
-
-    .card:hover {
-      border-radius: 5px;
-      filter: drop-shadow(2px 2px 2px #000);
-    }
-
-    .form-label {
-      margin-bottom: 0px;
-      margin-top: 4px;
-    }
-  </style>
-  <style>
-    /*Footer*/
-    .Contenedorfooter {
-      width: 100%;
-      margin-bottom: 8px;
-      align-items: center;
-    }
-
-    .footer a {
-      text-decoration: none;
-      color: #000;
-    }
-
-    .footer a:hover {
-      text-shadow: 0px 0px 0px;
-      color: #000;
-      text-decoration: underline;
-    }
-
-    #Facebook:hover {
-      border-radius: 0px;
-      transform: scale(1.2);
-      transition: transform 0.3s ease;
-      filter: drop-shadow(2px 2px 2px #000);
-    }
-
-    #Whatsapp:hover {
-      transform: scale(1.2);
-      transition: transform 0.3s ease;
-      border-radius: 5px;
-      filter: drop-shadow(2px 2px 2px #000);
-    }
-
-    #Regresar:hover {
-      transform: scale(1.2);
-      transition: transform 0.3s ease;
-      border-radius: 0px;
-      filter: drop-shadow(2px 2px 2px #000);
-    }
-  </style>
+  <link rel="stylesheet" href="Estilos.css">
 
 </head>
 
