@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <<div class="container py-2">
+    <div class="container py-2">
     <div class="card bg-light" id="header-border2">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
