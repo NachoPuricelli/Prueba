@@ -11,6 +11,85 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <style>
+        /* Estilos para el header/navbar */
+#header-border2 .navbar {
+    padding: 15px 0;
+}
+
+#header-border2 .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    height: 100px;
+    transition: transform 0.3s ease;
+}
+
+.header-logo:hover {
+    transform: scale(1.05);
+}
+
+.header-title {
+    font-size: 2rem;
+    margin-left: 15px;
+    white-space: nowrap;
+}
+
+.header-subtitle {
+    font-size: 1.5rem;
+}
+
+/* Media queries para el header */
+@media (max-width: 992px) {
+    #header-border2 .container {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .header-subtitle {
+        width: 100%;
+        margin-top: 15px;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-logo {
+        height: 70px;
+    }
+    
+    .header-title {
+        font-size: 1.5rem;
+        margin-left: 10px;
+    }
+    
+    .header-subtitle {
+        font-size: 1.1rem;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-logo {
+        height: 60px;
+    }
+    
+    .header-title {
+        font-size: 1.3rem;
+    }
+    
+    .header-subtitle {
+        font-size: 1rem;
+        margin-top: 8px;
+    }
+    
+    #header-border2 .navbar {
+        padding: 10px 0;
+    }
+}
         /* Estilos para los headers de las cards */
         .card-header {
             padding: 15px;
