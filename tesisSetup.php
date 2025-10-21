@@ -17,7 +17,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container">
                     <div class="d-flex align-items-center">
-                        <a class="navbar-brand" href="Tesis.php">
+                        <a class="navbar-brand" href="index.php">
                             <img src="https://cdn.icon-icons.com/icons2/656/PNG/512/settings_online_web_pc_mac_monitor_icon-icons.com_59975.png" alt="" height="100px" class="header-logo">
                         </a>
                         <h1 class="header-title mb-0">PCRepair</h1>
@@ -65,7 +65,7 @@
             $softSolicitados = trim($_POST['softSolicitados'] ?? '');
 
             // Conexión a la Base de Datos
-            $conex = new mysqli('localhost', 'root', '', 'tesis');
+            $conex = new mysqli('sql312.infinityfree.com', 'if0_40195577', 'Z8yKTU0s9LP6', 'if0_40195577_tesis');
             if ($conex->connect_errno) {
                 die("Error en la conexión: " . $conex->connect_error);
             }

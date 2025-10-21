@@ -310,11 +310,11 @@ select {
 
   #footer a {
     margin: 8px 15px;
-    font-size: 15px;
+    font-size: 18px;
   }
 }
 
-/* Móviles pequeños (≤576px) */
+/* Celulares (≤576px) */
 @media (max-width: 576px) {
   .header-logo {
     height: 60px;
@@ -353,7 +353,7 @@ select {
   #footer a {
     margin: 10px 0;
     justify-content: center;
-    font-size: 14px;
+    font-size: 18px;
   }
 
   #footer img {

@@ -30,7 +30,7 @@ if (isset($_POST['AceptarLogin'])) {
     <div class="card bg-light mb-4" id="inicial">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container bg-light">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="index.php">
             <img src="https://cdn.icon-icons.com/icons2/656/PNG/512/settings_online_web_pc_mac_monitor_icon-icons.com_59975.png" alt="" height="100px">
           </a>
           <h1 class="justify-content-start">PCRepair</h1>
